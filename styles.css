@@ -45,6 +45,7 @@ border-radius: 15px;
   background-color: var(--color-White);
   border-radius: 15px;
   /* overflow: hidden; */
+  /* padding: 2rem 1.5rem 1.5rem 1.5rem; */
   position: relative;
 }
 
@@ -57,11 +58,14 @@ border-radius: 15px;
   position: absolute;
   background-color: var(--color-VeryDarkGrayishBlue);
   align-items: center;
+  /* justify-content: center; */
+  border-bottom-right-radius:15px;
+  border-bottom-left-radius:15px;
   display: flex;
-  width: calc(100% + 4px);
+  width: calc(100% + 1px);
   height: 71px;
   left: -1px;
-  bottom: -1px;
+  bottom: 0px;
   transition: all 0.3s ease-in-out;
   visibility: hidden;
   opacity: 0;
@@ -82,7 +86,7 @@ border-radius: 15px;
 }
 
 .info {
-  padding-right: 4rem;
+  padding-right: 2rem;
 }
 
 .icons {
@@ -124,7 +128,7 @@ border-radius: 15px;
   font-weight: 400;
   font-size: 13px;
   margin-left: 2rem;
-  margin-right: 2rem;
+  margin-right: 1rem;
   letter-spacing: 3px;
 }
 
@@ -145,6 +149,7 @@ border-radius: 15px;
   padding: 0.5rem;
   background-color: var(--color-GrayishBlue);
   border-radius: 50px;
+  margin-left: 1rem;
 }
 
 .share-image-2:hover {
@@ -152,6 +157,7 @@ border-radius: 15px;
 }
 
 @media (min-width:768px) {
+
   #container {
     min-width: 750px;
   }
@@ -224,8 +230,8 @@ border-radius: 15px;
   .share-image-2 {
     position: absolute;
     overflow: visible;
-    left: 100px;
-    bottom: -52px;
+    left: 86px;
+    bottom: -53px;
   }
 }
 
