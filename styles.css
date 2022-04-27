@@ -1,0 +1,264 @@
+:root {
+  --color-VeryDarkGrayishBlue: hsl(217, 19%, 35%);
+  --color-DesaturatedDarkBlue: hsl(214, 17%, 51%);
+  --color-GrayishBlue: hsl(212, 23%, 69%);
+  --color-LightGrayishBlue: hsl(210, 46%, 95%);
+  --color-White: hsl(0, 0%, 100%);
+  --color-shadow: rgba(0, 0, 0, 0.35)0px 5px 15px;
+}
+
+*, *::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 0 2.4rem;
+  font-family: 'Manrope', sans-serif;
+  background-color: var(--color-LightGrayishBlue);
+}
+
+h3 {
+  color: var(--color-VeryDarkGrayishBlue);
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+h5 {
+  color: var(--color-VeryDarkGrayishBlue);
+  font-weight: 700;
+}
+
+#container {
+  max-width: 400px;
+  box-shadow: var(--color-shadow);
+border-radius: 15px;
+}
+
+#card {
+  background-color: var(--color-White);
+  border-radius: 15px;
+  /* overflow: hidden; */
+  position: relative;
+}
+
+#profile {
+  align-items: center;
+  display: flex;
+}
+
+.share-hover {
+  position: absolute;
+  background-color: var(--color-VeryDarkGrayishBlue);
+  align-items: center;
+  display: flex;
+  width: calc(100% + 4px);
+  height: 71px;
+  left: -1px;
+  bottom: -1px;
+  transition: all 0.3s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.share-hover-show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.profile-image {
+  border-radius: 50px;
+  margin-right: 1.2rem;
+}
+
+.content {
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+}
+
+.info {
+  padding-right: 4rem;
+}
+
+.icons {
+  padding-right: 2rem;
+  align-items: center;
+}
+
+.icons-2 {
+  margin-right: 1rem;
+}
+
+.share-image {
+  padding: 0.5rem;
+  background-color: hsl(210, 46%, 95%, 100%);
+  border-radius: 50px;
+}
+
+.share-image:hover {
+  cursor: pointer;
+}
+
+.para {
+  color: var(--color-DesaturatedDarkBlue);
+  font-size: 15px;
+  font-weight: 400;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 0.7rem;
+  line-height: 1.5;
+}
+
+.para-2 {
+  color: var(--color-DesaturatedDarkBlue);
+  font-size: 14px;
+}
+
+.para-3 {
+  color: var(--color-GrayishBlue);
+  font-weight: 400;
+  font-size: 13px;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  letter-spacing: 3px;
+}
+
+.image-container {
+  background-image: url("images/drawers.jpg");
+  /* max-width: 100%; */
+  background-size: cover;
+  min-width: 300px;
+  height: 15rem;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+
+
+}
+
+.share-image-2 {
+  color: var(--color-LightGrayishBlue);
+  padding: 0.5rem;
+  background-color: var(--color-GrayishBlue);
+  border-radius: 50px;
+}
+
+.share-image-2:hover {
+  cursor: pointer;
+}
+
+@media (min-width:768px) {
+  #container {
+    min-width: 750px;
+  }
+
+  #card {
+    height: 325px;
+    display: flex;
+  }
+
+  .image-container {
+
+    min-width: 300px;
+    height: 325px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 15px;
+  }
+
+  .profile-image {
+    margin-right: 1rem;
+  }
+
+  .info {
+    padding-right: 10.5rem;
+  }
+
+  .content {
+    padding: 2rem 2rem 1rem 2rem;
+  }
+
+  .share-hover {
+    position: relative;
+    position: absolute;
+    background-color: var(--color-VeryDarkGrayishBlue);
+    align-items: center;
+    display: flex;
+    width: calc(100% + -528px);
+    height: 49px;
+    left: 577px;
+    bottom: 91px;
+    border-radius: 15px;
+    transition: all 0.3s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .share-hover-show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .share-hover::after {
+    content: "";
+    position: absolute;
+    width: 1rem;
+    bottom: -6px;
+    height: 1rem;
+    left: 110px;
+    transform: rotate(45deg);
+    background-color: var(--color-VeryDarkGrayishBlue);
+  }
+
+  .icons {
+    margin-right: -3rem;
+  }
+
+  .para-3 {
+    margin-left: 1rem;
+  }
+
+  .share-image-2 {
+    position: absolute;
+    overflow: visible;
+    left: 100px;
+    bottom: -52px;
+  }
+}
+
+
+@media (min-width:1024px){
+  #container {
+  /* min-width: 770px; */
+  }
+
+  #card {
+
+    height: 320px;
+
+  }
+
+  .content {
+    padding: 2rem 2rem 1rem 2rem;
+  }
+
+  .share-hover {
+
+    width: calc(100% + -528px);
+    height: 49px;
+    left: 577px;
+    bottom: 86px;
+
+  }
+
+  .image-container {
+
+    min-width: 300px;
+    height: 320px;
+
+  }
+
+  }
